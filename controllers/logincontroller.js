@@ -12,9 +12,10 @@ const login = async(req,res)=> {
                     {email :user.email, id:user._id,fname: user.fname},
                     process.env.SECRETKEY
                 );
-                // console.log(token)
+            
                 res.json({
                     message:"Logged In",
+                    token,
                     
                 });
 
